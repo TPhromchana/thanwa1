@@ -1,0 +1,48 @@
+
+<ion-header>
+
+  <ion-navbar>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+      </button>
+    <ion-title>คำนวนหาค่าพลังงาน</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content padding>
+    <ion-list>
+        <ion-item>
+          <ion-label>เวลาออกกำลังกาย</ion-label>
+          <ion-select [(ngModel)]="tdee">
+            <ion-option value="nes">น้อยมากหรือไม่เลย</ion-option>
+            <ion-option value="n64">1-3ครั้ง/สัปดาห์</ion-option>
+            <ion-option value="ps">4-5ครั้ง/สัปดาห์</ion-option>
+            <ion-option value="genesis">6-7ครั้ง/สัปดาห์</ion-option>
+            <ion-option value="saturn">มากกว่า 2 ครั้ง/วัน</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+      <ion-list>
+          <ion-item>
+            <ion-label>เลือกเพศ</ion-label>
+            <ion-select [(ngModel)]="gender">
+              <ion-option value="male">ชาย</ion-option>
+              <ion-option value="female">หญิง</ion-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+      <ion-item>
+          <ion-label stacked>กรอกน้ำหนัก</ion-label>
+          <ion-input type="text" [(ngModel)]="w"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label stacked>กรอกส่วนสูง</ion-label>
+          <ion-input type="text" [(ngModel)]="h"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label stacked>กรอกอายุ</ion-label>
+          <ion-input type="text" [(ngModel)]="age"></ion-input>
+      </ion-item>
+      <button (click)="LuanchHomePage()" block ion-button color="danger">คำนวนหา BMI</button>
+      
+</ion-content>

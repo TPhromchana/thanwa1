@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>คำนวนหาดัชนีมวลกาย</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+      
+      <ion-item>
+          <ion-label stacked>กรอกน้ำหนัก</ion-label>
+          <ion-input type="text" [(ngModel)]="w"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label stacked>กรอกส่วนสูง</ion-label>
+          <ion-input type="text" [(ngModel)]="h"></ion-input>
+      </ion-item>
+      
+      <button (click)="LuanchHomePage()" block ion-button color="danger">คำนวนหา BMI</button>
+     
+     
+      
+   </ion-content>
